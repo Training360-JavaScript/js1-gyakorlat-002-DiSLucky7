@@ -4,3 +4,10 @@
 - A függvény neve `generateList` legyen!
 - A HTML-template egy lista, amelynek a listaelemei a kapott tömb értékeit tartalmazzák.
 */
+
+function generateList(arr) {
+    const list = arr.map(element => `<li>${element}</li>`)
+    document.querySelector('h1')
+    .insertAdjacentHTML('afterend', `<ul>${list.reduce((acc, curr) => acc + curr)}</ul>`);
+}
+generateList(['asd', 'asd']);

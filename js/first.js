@@ -4,3 +4,9 @@
 - A függvény szorozza meg a tömbelemek értékét 1.27-tel, majd pedig 
 __térjen vissza__ az elemek egész számra kerekített összegével!
 */
+
+function brutto(arr) {
+    return arr.map(element => Math.round(element * 1.27)).reduce((acc, curr) => acc + curr, 0)
+};
+
+console.log(brutto([1, 4, 6, 3]));
